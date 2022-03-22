@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
 import reset from 'styled-reset';
 import { createGlobalStyle } from 'styled-components';
-import ArticlesView from './components/ArticlesView';
+import ArticlesView from '../ArticlesView';
 
 const client = new QueryClient();
 

@@ -1,6 +1,6 @@
 # Wiki Helper
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project uses Wikipedia's API to generate a list of most viewed articles.
 
 ## Potential Enhancements
 
