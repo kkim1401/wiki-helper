@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import reset from 'styled-reset';
+import { createGlobalStyle } from 'styled-components';
+import ArticlesView from './components/ArticlesView';
+
+const client = new QueryClient();
+
+const GlobalStyle = createGlobalStyle`
+  ${reset}
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+`;
+
+export function Providers({ children }) {
+  return (
+    <QueryClientProvider client={client}>
+      <GlobalStyle />
+      {children}
+    </QueryClientProvider>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Providers>
+      <ArticlesView />
+    </Providers>
   );
 }
 
