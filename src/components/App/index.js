@@ -1,1 +1,1 @@
-export { default } from './App';
+export { default, Providers } from './App';

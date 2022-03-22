@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { Providers } from './src/App';
+import { Providers } from './src/components/App';
 
 const customRender = (ui, options) =>
   render(ui, { wrapper: Providers, ...options });
