@@ -4,7 +4,7 @@ This project uses Wikipedia's API to generate a list of most viewed articles.
 
 ## Potential Enhancements
 
-Enhancements include, but are not limited to:
+Future enhancements may include, but are not limited to:
 
 1. More test cases using React Testing Library
 2. Smaller bundle size using applicable Babel plugins like `babel-plugin-styled-components`
